@@ -1,0 +1,42 @@
+# ==========================================================
+# Fashion Data – Business Intelligence & AI
+# Entorno virtual (venv)
+# ----------------------------------------------------------
+# Incluye librerías de análisis de datos, visualización,
+# modelado predictivo y soporte opcional GPU (RTX / CUDA)
+# ==========================================================
+
+# --- CORE DATA ANALYSIS ---
+numpy>=2.0.0
+pandas>=2.2.0
+scikit-learn>=1.5.0
+scipy>=1.11.0
+
+# --- VISUALIZATION ---
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# --- MACHINE LEARNING ---
+lightgbm>=4.3.0          # GPU/CPU autodetect
+xgboost>=2.1.1           # GPU/CPU autodetect
+shap>=0.45.0             # Interpretabilidad de modelos (SHAP values)
+
+# --- NOTEBOOK / ENVIRONMENT ---
+jupyter>=1.0.0
+notebook>=7.1.0
+ipykernel>=6.29.0
+ipywidgets>=8.1.0
+jupytext
+
+# --- OPTIONAL GPU SUPPORT ---
+cupy-cuda12x>=13.0.0     # Aceleración NumPy por GPU (CUDA 12.x, opcional)
+# Nota: LightGBM y XGBoost ya usan GPU automáticamente si está disponible.
+
+# --- UTILS ---
+tqdm>=4.66.0
+pyyaml>=6.0.1
+
+# --- POWER BI EXPORT HELPERS (opcional) ---
+pyarrow>=16.0.0
+fastparquet>=2024.3.0
+sqlalchemy>=2.0.0

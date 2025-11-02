@@ -1,0 +1,62 @@
+2025-11-02 04:21:16,992 - [INFO] - Iniciando proceso ETL - Fashion Retail Sales
+2025-11-02 04:21:16,992 - [INFO] - Cargando dataset desde: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\raw\Fashion_Retail_Sales.csv
+2025-11-02 04:21:16,996 - [INFO] - Dataset cargado correctamente: 3400 filas, 6 columnas
+2025-11-02 04:21:16,996 - [INFO] - Iniciando limpieza básica de datos...
+2025-11-02 04:21:16,998 - [INFO] - Duplicados eliminados: 0
+2025-11-02 04:21:17,001 - [INFO] - Creando variables derivadas...
+2025-11-02 04:21:17,004 - [INFO] - Generando resumen de calidad...
+2025-11-02 04:21:17,005 - [INFO] - Tipos de datos:
+customer_reference_id             int64
+item_purchased                   object
+purchase_amount_usd             float64
+date_purchase            datetime64[ns]
+review_rating                   float64
+payment_method                   object
+purchase_year                     int32
+purchase_month                   object
+purchase_day                      int32
+purchase_weekday                 object
+ticket_segment                 category
+satisfaction_level             category
+dtype: object
+2025-11-02 04:21:17,007 - [INFO] - Dimensiones finales: (3400, 12)
+2025-11-02 04:21:17,018 - [INFO] - Archivo limpio guardado en: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\fashion_sales_clean.csv
+2025-11-02 04:21:17,018 - [INFO] - ETL finalizado correctamente.
+2025-11-02 04:21:17,018 - [INFO] - Iniciando generación de KPIs - Fashion Data
+2025-11-02 04:21:17,018 - [INFO] - Cargando dataset limpio desde: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\fashion_sales_clean.csv
+2025-11-02 04:21:17,041 - [INFO] - Dataset cargado correctamente: 3400 filas, 12 columnas
+2025-11-02 04:21:17,042 - [INFO] - Generando KPI de ventas...
+2025-11-02 04:21:17,046 - [INFO] - KPI de ventas guardado en: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\kpi\kpi_sales.csv
+2025-11-02 04:21:17,046 - [INFO] - Generando KPI de método de pago...
+2025-11-02 04:21:17,050 - [INFO] - KPI de método de pago guardado en: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\kpi\kpi_payment.csv
+2025-11-02 04:21:17,050 - [INFO] - Generando KPI de satisfacción...
+2025-11-02 04:21:17,055 - [INFO] - KPI de satisfacción guardado en: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\kpi\kpi_satisfaction.csv
+2025-11-02 04:21:17,055 - [INFO] - Generando KPI de clientes...
+2025-11-02 04:21:17,059 - [INFO] - KPI de clientes guardado en: C:\Users\armal\OneDrive\Documentos\Python\Fashion_data\data\processed\kpi\kpi_customer.csv
+2025-11-02 04:21:17,059 - [INFO] - Resumen general de KPIs:
+2025-11-02 04:21:17,060 - [INFO] -   Total registros: 3400
+2025-11-02 04:21:17,060 - [INFO] -   Clientes únicos: 166
+2025-11-02 04:21:17,060 - [INFO] -   Ticket medio (USD): 147.78
+2025-11-02 04:21:17,060 - [INFO] -   Rating promedio: 3.0
+2025-11-02 04:21:17,060 - [INFO] -   Ventas totales (USD): 502452.0
+2025-11-02 04:21:17,060 - [INFO] - Generación de KPIs completada exitosamente.
+2025-11-02 04:21:17,060 - [INFO] - Iniciando modelado ML (task=both)
+2025-11-02 04:21:17,070 - [INFO] - Dataset cargado: 3400 filas, 14 columnas
+2025-11-02 04:21:17,070 - [INFO] - Ejecutando regresión...
+2025-11-02 04:21:17,083 - [INFO] - Modelo linear_regression guardado correctamente.
+2025-11-02 04:21:18,060 - [INFO] - Modelo random_forest_regression guardado correctamente.
+2025-11-02 04:21:18,062 - [INFO] - Resultados de regresión guardados correctamente.
+2025-11-02 04:21:18,062 - [INFO] - Ejecutando clasificación...
+2025-11-02 04:21:18,133 - [INFO] - Modelo logistic_regression guardado correctamente.
+2025-11-02 04:21:18,967 - [INFO] - Modelo random_forest_classification guardado correctamente.
+2025-11-02 04:21:18,969 - [INFO] - Resultados de clasificación guardados correctamente.
+2025-11-02 04:21:18,971 - [INFO] - Matriz de confusión guardada correctamente.
+2025-11-02 04:21:18,971 - [INFO] - Modelado ML completado correctamente.
+2025-11-02 04:21:18,980 - [INFO] - 🎨 Generando visualizaciones del proyecto...
+2025-11-02 04:21:20,589 - [INFO] - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-11-02 04:21:20,591 - [INFO] - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-11-02 04:21:20,788 - [INFO] - ✅ Gráfico de KPI de ventas generado correctamente.
+2025-11-02 04:21:21,129 - [INFO] - ✅ Visualizaciones completadas correctamente.
+2025-11-02 04:21:21,129 - [INFO] - Iniciando modelo estrella...
+2025-11-02 04:21:21,202 - [INFO] - ✅ RMSE=406.65 | R²=-0.017
+2025-11-02 04:21:21,840 - [INFO] - Dashboard completado correctamente.
